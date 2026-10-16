@@ -1,0 +1,8 @@
+node_modules/
+dist/
+pdf-grupos-electron/node_modules/
+pdf-grupos-electron/dist/
+pdf-grupos-electron/release/
+*.log
+.env
+.env.*
