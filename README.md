@@ -72,4 +72,4 @@ Os PDFs permanecem no armazenamento local do aplicativo. A combinação é feita
 
 ## Licença
 
-Este projeto ainda não possui uma licença definida.
+Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
