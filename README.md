@@ -1,45 +1,59 @@
-# Agrupador de PDFs
+# PDF Groups
 
-Aplicativo para organizar arquivos PDF em grupos e gerar um novo PDF para cada grupo.
+PDF Groups is a small desktop and web application for organizing PDF files into groups and creating a separate PDF for each group.
 
-Os arquivos são processados localmente no computador ou no navegador. Nenhum PDF é enviado para um servidor.
+I built it to solve a practical problem: when several documents need to be combined in different ways, simply merging everything into one file is not enough. With PDF Groups, you can arrange files into named groups, reorder them, and download the results individually or all at once.
 
-## Recursos
+> **Português:** [Leia o README em português](README.pt-BR.md)
 
-- Seleção de vários PDFs de uma vez.
-- Arrastar arquivos para dentro do aplicativo.
-- Organização por grupos.
-- Renomeação e exclusão de grupos.
-- Reordenação dos PDFs dentro de cada grupo.
-- Identificação e bloqueio de arquivos duplicados.
-- Desfazer a última alteração de organização.
-- Progresso durante a combinação dos arquivos.
-- Download de um grupo ou de todos os grupos.
-- Persistência local dos arquivos usando IndexedDB.
-- Tema claro e escuro.
-- Interface “Sobre” com informações do aplicativo.
+## Features
 
-## Executar no navegador
+- Select multiple PDF files at once.
+- Drag and drop files into the application.
+- Organize files into named groups.
+- Rename and delete groups.
+- Reorder PDFs within each group.
+- Detect and block duplicate files.
+- Undo the latest organization change.
+- Track progress while combining files.
+- Download one group or all groups at once.
+- Store files locally using IndexedDB.
+- Light and dark themes.
+- Web version and Windows desktop version.
 
-Requisitos: Node.js 18 ou superior.
+## Privacy
+
+PDF files stay on your computer. They are not uploaded to a server. PDF creation happens locally with `pdf-lib`.
+
+## Tech stack
+
+- React
+- Vite
+- Electron
+- pdf-lib
+- IndexedDB
+
+## Run in the browser
+
+Requirements: Node.js 18 or later.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Depois, abra o endereço exibido pelo Vite no navegador.
+Then open the address shown by Vite in your browser.
 
-## Testar e gerar o build web
+## Test and build the web version
 
 ```bash
 npm test
 npm run build
 ```
 
-## Aplicativo Windows
+## Windows application
 
-O projeto Electron fica em `pdf-grupos-electron`.
+The Electron project is located in `pdf-grupos-electron`.
 
 ```bash
 cd pdf-grupos-electron
@@ -47,29 +61,25 @@ npm install
 npm run dev
 ```
 
-Para gerar o instalador e a versão portátil:
+To generate the installer and portable version:
 
 ```bash
 npm run dist
 ```
 
-Os arquivos são gerados em `pdf-grupos-electron/release`:
+The generated files are placed in `pdf-grupos-electron/release`:
 
-- `PDF Grupos Setup 1.0.0.exe`: instalador do Windows.
-- `PDF Grupos 1.0.0.exe`: versão portátil.
+- `PDF Grupos Setup 1.0.0.exe`: Windows installer.
+- `PDF Grupos 1.0.0.exe`: portable version.
 
-## Estrutura
+## Project structure
 
 ```text
-src/                    Interface web e lógica de agrupamento
-test/                   Testes automatizados
-pdf-grupos-electron/    Aplicativo desktop baseado em Electron
+src/                    Web interface and grouping logic
+test/                   Automated tests
+pdf-grupos-electron/    Electron desktop application
 ```
 
-## Privacidade
+## License
 
-Os PDFs permanecem no armazenamento local do aplicativo. A combinação é feita localmente usando `pdf-lib`.
-
-## Licença
-
-Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
