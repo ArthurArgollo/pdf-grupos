@@ -24,6 +24,6 @@ export function moveFile(groups, groupId, index, direction) {
 }
 
 export function downloadName(name) {
-  const safe = String(name || '').trim().replace(/[^\w\d-_]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase();
-  return `${safe || 'grupo'}.pdf`;
+  const fileName = String(name || '').trim() || 'grupo';
+  return /\.pdf$/i.test(fileName) ? fileName : `${fileName}.pdf`;
 }
